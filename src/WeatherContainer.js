@@ -42,7 +42,7 @@ export default function WeatherContainer(props) {
 		return (
 			<div className="WeatherContainer">
 				<form onSubmit={handleSubmit}>
-					<div className="row">
+					<div className="row searchBar">
 						<div className="col-9">
 							<input
 								type="search"
@@ -63,6 +63,7 @@ export default function WeatherContainer(props) {
 					</div>
 				</form>
 				<Info data={weatherData} />
+				<Forecast coordinates={weatherData.coordinates} />
 			</div>
 		);
 	} else {

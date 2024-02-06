@@ -56,11 +56,21 @@
 	top: -34px;
 }
 
+.WeatherContainer .searchBar {
+	display: flex;
+}
+
 .Temperature .unit {
 	font-size: 20px;
 }
 
+.Temperature .temperatureRounded {
+	font-size: 50px;
+}
+
 .Forecast {
+	display: flex;
+	justify-content: space-evenly;
 	text-align: center;
 }
 .Forecast-temperature-min {

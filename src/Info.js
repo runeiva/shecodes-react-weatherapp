@@ -15,12 +15,13 @@ export default function Info(props) {
 			</ul>
 			<div className="row mt-3">
 				<div className="col-6">
-					<div className="float-left">
+					<div className="mainInfo">
 						<Icon code={props.data.icon} size={52} />
 						<Temperature celsius={props.data.temperature} />
 					</div>
 				</div>
 				<div className="col-6">
+					<div className="extraInfo">
 					<ul>
 						<li>Humidity: {Math.round(props.data.humidity)}%</li>
 						<li>
@@ -28,6 +29,7 @@ export default function Info(props) {
 							m/s
 						</li>
 					</ul>
+					</div>
 				</div>
 			</div>
 		</div>

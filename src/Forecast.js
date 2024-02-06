@@ -16,12 +16,11 @@ export default function WeatherForecast(props) {
 	}
 	if (loaded) {
 		return (
-			<div className="Forecast">
-				<div className="row">
+			<div className="Forecast row">
 					{forecast.map(function (dailyForecast, index) {
 						if (index < 5) {
 							return (
-								<div className="col">
+								<div className="col" key={index}>
 									<ForecastDayInfo data={dailyForecast} />
 								</div>
 							);
@@ -29,14 +28,13 @@ export default function WeatherForecast(props) {
 							return null;
 						}
 					})}
-				</div>
 			</div>
 		);
 	} else {
 		const apiKey = "8b0f6dca34a0f66b303deotf68e3607e";
 		let lon = props.coordinates.longitude;
 		let lat = props.coordinates.latitude;
-		let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${lon}&lat=${lat}&key=${apiKey}&units=imperial`;
+		let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${lon}&lat=${lat}&key=${apiKey}&units=metric`;
 
 		axios.get(apiUrl).then(handleResponse);
 
