@@ -4,7 +4,7 @@ export default function Footer () {
     return (
         <div className="Footer">
             <footer>
-                Coded by Runeiva. Hosted on <a href={"https://polite-granita-444d38.netlify.app/"}>Netlify</a>. Repository <a href={"https://github.com/anah-cordeiro/shecodes-react-weatherapp"}>here</a>
+                Coded by Runeiva. Hosted on <a href={"https://polite-granita-444d38.netlify.app/"}>Netlify</a>.
             </footer>
 
         </div>
